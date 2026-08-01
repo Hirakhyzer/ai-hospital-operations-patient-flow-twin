@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="330" viewBox="0 0 1100 330">
+  <rect width="1100" height="330" fill="#f8fafc"/>
+  <style>
+    .node{fill:#fff;stroke:#0f766e;stroke-width:2;rx:12}
+    .txt{font-family:Arial,sans-serif;font-size:16px;fill:#0f172a}
+    .arrow{stroke:#334155;stroke-width:2;marker-end:url(#arrow)}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+  <rect class="node" x="40" y="80" width="145" height="80"/><text class="txt" x="65" y="113">ED arrivals</text><text class="txt" x="65" y="138">and queues</text>
+  <line class="arrow" x1="190" y1="120" x2="245" y2="120"/>
+  <rect class="node" x="250" y="80" width="145" height="80"/><text class="txt" x="275" y="113">Beds and</text><text class="txt" x="275" y="138">ICU pressure</text>
+  <line class="arrow" x1="400" y1="120" x2="455" y2="120"/>
+  <rect class="node" x="460" y="80" width="145" height="80"/><text class="txt" x="485" y="113">Staff</text><text class="txt" x="485" y="138">workload</text>
+  <line class="arrow" x1="610" y1="120" x2="665" y2="120"/>
+  <rect class="node" x="670" y="80" width="145" height="80"/><text class="txt" x="695" y="113">Delay</text><text class="txt" x="695" y="138">bottlenecks</text>
+  <line class="arrow" x1="820" y1="120" x2="875" y2="120"/>
+  <rect class="node" x="880" y="80" width="170" height="80"/><text class="txt" x="905" y="113">Scenario</text><text class="txt" x="905" y="138">comparison</text>
+</svg>
