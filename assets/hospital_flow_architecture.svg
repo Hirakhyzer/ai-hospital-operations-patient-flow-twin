@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+  <rect width="1200" height="360" fill="#f8fafc"/>
+  <style>
+    .box{fill:#ffffff;stroke:#2563eb;stroke-width:2;rx:14}
+    .txt{font-family:Arial,sans-serif;font-size:18px;fill:#0f172a}
+    .sub{font-family:Arial,sans-serif;font-size:13px;fill:#475569}
+    .arrow{stroke:#0f172a;stroke-width:2;marker-end:url(#arrow)}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0f172a"/></marker></defs>
+  <rect class="box" x="30" y="90" width="170" height="100"/><text class="txt" x="55" y="130">Synthetic</text><text class="txt" x="55" y="153">Hospital Data</text><text class="sub" x="55" y="176">arrivals, beds, staff</text>
+  <line class="arrow" x1="205" y1="140" x2="255" y2="140"/>
+  <rect class="box" x="260" y="90" width="170" height="100"/><text class="txt" x="285" y="130">Flow</text><text class="txt" x="285" y="153">Forecast</text><text class="sub" x="285" y="176">demand and wait</text>
+  <line class="arrow" x1="435" y1="140" x2="485" y2="140"/>
+  <rect class="box" x="490" y="90" width="170" height="100"/><text class="txt" x="515" y="130">Capacity +</text><text class="txt" x="515" y="153">Staff Audit</text><text class="sub" x="515" y="176">beds, ICU, workload</text>
+  <line class="arrow" x1="665" y1="140" x2="715" y2="140"/>
+  <rect class="box" x="720" y="90" width="170" height="100"/><text class="txt" x="745" y="130">Delay +</text><text class="txt" x="745" y="153">Equity Audit</text><text class="sub" x="745" y="176">handoffs, wait gaps</text>
+  <line class="arrow" x1="895" y1="140" x2="945" y2="140"/>
+  <rect class="box" x="950" y="90" width="210" height="100"/><text class="txt" x="975" y="130">Reports +</text><text class="txt" x="975" y="153">Scenarios</text><text class="sub" x="975" y="176">figures and audit log</text>
+  <text class="sub" x="380" y="285">Planning support only — not clinical decision support or triage software</text>
+</svg>
