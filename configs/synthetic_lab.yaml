@@ -1,0 +1,7 @@
+seed: 42
+units: 8
+arrivals: 720
+hours: 72
+output_dir: outputs
+scenario: baseline
+safety_boundary: synthetic hospital operations planning support only
