@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="430" viewBox="0 0 1100 430" role="img" aria-label="Hospital operations patient flow workflow">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f8fafc"/><stop offset="100%" stop-color="#eff6ff"/></linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#2563eb"/></marker>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+    <style>
+      .title{font:800 27px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .sub{font:500 14px Arial,Helvetica,sans-serif;fill:#475569}
+      .label{font:700 16px Arial,Helvetica,sans-serif;fill:#111827}
+      .small{font:500 13px Arial,Helvetica,sans-serif;fill:#475569}
+      .arrow{stroke:#2563eb;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1100" height="430" rx="28" fill="url(#bg)"/>
+  <text class="title" x="44" y="54">Responsible Hospital Operations Workflow</text>
+  <text class="sub" x="44" y="80">Each step generates synthetic planning evidence before human governance review.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="46" y="128" width="160" height="92" rx="20" fill="#ffffff"/>
+    <text class="label" x="70" y="162">Synthetic Data</text>
+    <text class="small" x="70" y="188">fictional units,</text><text class="small" x="70" y="207">patients, staff</text>
+
+    <rect x="258" y="128" width="160" height="92" rx="20" fill="#ffffff"/>
+    <text class="label" x="282" y="162">Forecast</text>
+    <text class="small" x="282" y="188">demand, beds,</text><text class="small" x="282" y="207">wait pressure</text>
+
+    <rect x="470" y="128" width="160" height="92" rx="20" fill="#ffffff"/>
+    <text class="label" x="494" y="162">Audit</text>
+    <text class="small" x="494" y="188">capacity, staff,</text><text class="small" x="494" y="207">handoff delays</text>
+
+    <rect x="682" y="128" width="160" height="92" rx="20" fill="#ffffff"/>
+    <text class="label" x="706" y="162">Scenarios</text>
+    <text class="small" x="706" y="188">surge, staffing,</text><text class="small" x="706" y="207">discharge policy</text>
+
+    <rect x="894" y="128" width="160" height="92" rx="20" fill="#ffffff"/>
+    <text class="label" x="918" y="162">Review</text>
+    <text class="small" x="918" y="188">reports, figures,</text><text class="small" x="918" y="207">audit trail</text>
+  </g>
+
+  <path class="arrow" d="M206 174 L258 174"/>
+  <path class="arrow" d="M418 174 L470 174"/>
+  <path class="arrow" d="M630 174 L682 174"/>
+  <path class="arrow" d="M842 174 L894 174"/>
+
+  <g filter="url(#shadow)">
+    <rect x="82" y="292" width="936" height="72" rx="20" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+    <text class="label" x="110" y="324">Clinical-safety boundary</text>
+    <text class="small" x="110" y="350">Outputs are research prompts only. Real hospital action requires clinicians, operations leaders, privacy controls, local policy, and incident governance.</text>
+  </g>
+</svg>
