@@ -1,20 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
-  <rect width="1200" height="360" fill="#f8fafc"/>
-  <style>
-    .box{fill:#ffffff;stroke:#2563eb;stroke-width:2;rx:14}
-    .txt{font-family:Arial,sans-serif;font-size:18px;fill:#0f172a}
-    .sub{font-family:Arial,sans-serif;font-size:13px;fill:#475569}
-    .arrow{stroke:#0f172a;stroke-width:2;marker-end:url(#arrow)}
-  </style>
-  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0f172a"/></marker></defs>
-  <rect class="box" x="30" y="90" width="170" height="100"/><text class="txt" x="55" y="130">Synthetic</text><text class="txt" x="55" y="153">Hospital Data</text><text class="sub" x="55" y="176">arrivals, beds, staff</text>
-  <line class="arrow" x1="205" y1="140" x2="255" y2="140"/>
-  <rect class="box" x="260" y="90" width="170" height="100"/><text class="txt" x="285" y="130">Flow</text><text class="txt" x="285" y="153">Forecast</text><text class="sub" x="285" y="176">demand and wait</text>
-  <line class="arrow" x1="435" y1="140" x2="485" y2="140"/>
-  <rect class="box" x="490" y="90" width="170" height="100"/><text class="txt" x="515" y="130">Capacity +</text><text class="txt" x="515" y="153">Staff Audit</text><text class="sub" x="515" y="176">beds, ICU, workload</text>
-  <line class="arrow" x1="665" y1="140" x2="715" y2="140"/>
-  <rect class="box" x="720" y="90" width="170" height="100"/><text class="txt" x="745" y="130">Delay +</text><text class="txt" x="745" y="153">Equity Audit</text><text class="sub" x="745" y="176">handoffs, wait gaps</text>
-  <line class="arrow" x1="895" y1="140" x2="945" y2="140"/>
-  <rect class="box" x="950" y="90" width="210" height="100"/><text class="txt" x="975" y="130">Reports +</text><text class="txt" x="975" y="153">Scenarios</text><text class="sub" x="975" y="176">figures and audit log</text>
-  <text class="sub" x="380" y="285">Planning support only — not clinical decision support or triage software</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-label="Hospital operations digital twin architecture">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#fef2f2"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2563eb"/>
+    </marker>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+    <style>
+      .title{font:800 28px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .sub{font:500 14px Arial,Helvetica,sans-serif;fill:#475569}
+      .label{font:700 16px Arial,Helvetica,sans-serif;fill:#111827}
+      .small{font:500 13px Arial,Helvetica,sans-serif;fill:#475569}
+      .box{fill:#ffffff;stroke:#e5e7eb;stroke-width:1.5;rx:22}
+      .arrow{stroke:#2563eb;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="520" rx="30" fill="url(#bg)"/>
+  <text class="title" x="48" y="54">Hospital Operations and Patient Flow Architecture</text>
+  <text class="sub" x="48" y="82">Synthetic hospital operations pipeline with separated forecasting, audits, scenarios, and governance review.</text>
+
+  <g filter="url(#shadow)">
+    <rect class="box" x="52" y="132" width="188" height="108"/>
+    <text class="label" x="78" y="168">Synthetic Inputs</text>
+    <text class="small" x="78" y="194">arrivals, beds, staff</text>
+    <text class="small" x="78" y="216">OR queues, handoffs</text>
+
+    <rect class="box" x="292" y="132" width="188" height="108"/>
+    <text class="label" x="318" y="168">Flow Forecast</text>
+    <text class="small" x="318" y="194">demand, admissions</text>
+    <text class="small" x="318" y="216">waiting-time pressure</text>
+
+    <rect class="box" x="532" y="132" width="188" height="108"/>
+    <text class="label" x="558" y="168">Capacity Audit</text>
+    <text class="small" x="558" y="194">beds, ICU, OR</text>
+    <text class="small" x="558" y="216">discharge blockers</text>
+
+    <rect class="box" x="772" y="132" width="188" height="108"/>
+    <text class="label" x="798" y="168">Staff + Delay</text>
+    <text class="small" x="798" y="194">workload, coverage</text>
+    <text class="small" x="798" y="216">handoff bottlenecks</text>
+
+    <rect class="box" x="1012" y="132" width="136" height="108"/>
+    <text class="label" x="1036" y="168">Reports</text>
+    <text class="small" x="1036" y="194">figures</text>
+    <text class="small" x="1036" y="216">audit log</text>
+  </g>
+
+  <path class="arrow" d="M240 186 L292 186"/>
+  <path class="arrow" d="M480 186 L532 186"/>
+  <path class="arrow" d="M720 186 L772 186"/>
+  <path class="arrow" d="M960 186 L1012 186"/>
+
+  <g filter="url(#shadow)">
+    <rect class="box" x="188" y="318" width="214" height="96"/>
+    <text class="label" x="216" y="352">Equity Review</text>
+    <text class="small" x="216" y="378">wait-time burden</text>
+    <text class="small" x="216" y="398">access group analysis</text>
+
+    <rect class="box" x="494" y="318" width="214" height="96"/>
+    <text class="label" x="522" y="352">Scenario Testing</text>
+    <text class="small" x="522" y="378">staffing boost, ICU surge</text>
+    <text class="small" x="522" y="398">discharge acceleration</text>
+
+    <rect class="box" x="800" y="318" width="214" height="96"/>
+    <text class="label" x="828" y="352">Governance Gate</text>
+    <text class="small" x="828" y="378">planning prompt only</text>
+    <text class="small" x="828" y="398">human review required</text>
+  </g>
+
+  <path class="arrow" d="M626 240 C610 288 430 294 402 352"/>
+  <path class="arrow" d="M866 240 C850 286 722 292 708 352"/>
+  <path class="arrow" d="M708 366 L800 366"/>
+
+  <rect x="52" y="452" width="1096" height="40" rx="20" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+  <text class="small" x="600" y="477" text-anchor="middle">Boundary: synthetic hospital-planning research only — not triage, diagnosis, bed command, or real-time clinical decision support.</text>
 </svg>
